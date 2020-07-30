@@ -19,9 +19,10 @@ class Account(id:String,n:Int,bal:Double)
 object Question4 {
 	  def main(args: Array[String]): Unit = {
 
-		val acc1 = new Account("677ydhh",1,100)	
-		val acc2 = new Account("677ydhm",2,-200)	
-		var bank:List[Account]=List(acc1,acc2)
+		val acc1 = new Account("123V",123,10000)	
+		val acc2 = new Account("234V",234,10000)	
+		val acc3 = new Account("345V",345,-10000)
+		var bank:List[Account]=List(acc1,acc2,acc3)
 		listNegativeAccounts(bank) //lists all negative balanced accounts
 		sumOfAccounts(bank) // shows the sum of accounts
 		intrestCalculator(bank) //intrest calculator
@@ -57,8 +58,8 @@ object Question4 {
 	{
 		for(element<-bnk)
 		{
-			if(element.balance>=0) element.balance*=(1+0.05/100) // intrest for positive balanced accounts
-			else element.balance*=(1+0.1/100) // intrest for negative balanced accounts
+			if(element.balance>=0) element.balance*=(1+0.05/100) // intrest for positive balanced accounts 0.05%
+			else element.balance*=(1+0.1/100) // intrest for negative balanced accounts 0.1%
 		
 		}
 		
